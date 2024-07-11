@@ -13,11 +13,13 @@ function gerarFaturaStr (fatura, pecas) {
       return pecas[apresentacao.id];
     }
   
-    for (let apre of fatura.apresentacoes) {
+    
       //const peca = pecas[apre.id];
       
       function calcularTotalApresentacao(apre) {
         let total = 0;
+        
+          
   
         switch (getPeca(apre).tipo) {
         case "tragedia":
@@ -37,10 +39,12 @@ function gerarFaturaStr (fatura, pecas) {
             throw new Error(`Peça desconhecia: ${getPeca(apre).tipo}`);
         }
         return total;
-      }
+     
+     
+    }
      
       
-    }
+    
     for (let apre of fatura.apresentacoes) {
     function calcularCredito(apre) {
       let creditos = 0;
